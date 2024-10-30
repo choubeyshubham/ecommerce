@@ -14,6 +14,9 @@ To run the dev server for your app, use:
 npx nx serve ecom-frontend
 ```
 
+```sh
+nx g @nx/angular:component --name=navbar --path=apps/ecom-frontend/src/app/layout/navbar/navbar
+```
 To create a production bundle:
 
 ```sh
