@@ -1,4 +1,3 @@
-
 logging:
   level:
     ROOT: INFO
@@ -46,14 +45,14 @@ spring:
     change-log: classpath:db/changelog/master.xml
     default-schema: ecommerce
     contexts: dev
-  #    drop-first: true
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://choubeyshubham.kinde.com
-          jwk-set-uri: https://choubeyshubham.kinde.com/.well-known/jwks
-          audiences: http://localhost:8080/api/
+ #   drop-first: true
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://choubeyshubham.kinde.com
+#          jwk-set-uri: https://codecake.kinde.com/.well-known/jwks
+#          audiences: http://localhost:8080/api
   devtools:
     restart:
       enabled: false
@@ -65,25 +64,23 @@ spring:
       max-file-size: 100MB
       max-request-size: 100MB
 
-
-
 server:
   port: 8080
 
-#application:
-#  client-base-url: http://localhost:4200
-#  cors:
-#    allowed-origins: http://localhost:4200
-#    allowed-methods: "*"
-#    allowed-headers: "*"
-#    exposed-headers: "*"
-#    allow-credentials: false
-#    max-age: 300
+application:
+  client-base-url: http://localhost:4200
+  cors:
+    allowed-origins: http://localhost:4200
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "*"
+    allow-credentials: false
+    max-age: 300
 #  kinde:
-#    api: https://choubeyshubham.kinde.com
-#    client-id: 154bfe4a677f4330a39a1e53a5403a25
-#    client-secret: 0NVIOA8arLaNwN7vmZjCX2liCbAqobBMaladkTwD2M0xL3SqG
-#    audience: https://choubeyshubham.kinde.com/api
+#    api: https://codecake.kinde.com
+#    client-id: ${KINDE_CLIENT_ID}
+#    client-secret: ${KINDE_CLIENT_SECRET}
+#    audience: https://codecake.kinde.com/api
 #  stripe:
 #    api-key: ${STRIPE_API_KEY}
 #    webhook-secret: ${STRIPE_WEBHOOK_SECRET}
