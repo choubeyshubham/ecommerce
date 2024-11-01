@@ -45,7 +45,7 @@ public class KindeService {
     try {
       ResponseEntity<KindeAccessToken> accessToken = restClient.post()
         .uri(apiUrl + "/oauth/token")
-        .body("grant_type=client_credentials&audience=" + URLEncoder.encode(audience, StandardCharsets.UTF_8))
+          .body("grant_type=client_credentials&audience=" + URLEncoder.encode(audience, StandardCharsets.UTF_8))
         .accept(MediaType.APPLICATION_JSON)
         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
         .header("Authorization",

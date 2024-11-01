@@ -22,13 +22,16 @@ public class UserSynchronizer {
   public UserSynchronizer(UserRepository userRepository, KindeService kindeService) {
     this.userRepository = userRepository;
     this.kindeService = kindeService;
+
   }
 
+
+  //to save some of the data from kinde to database
   public void syncWithIdp(Jwt jwtToken, boolean forceResync) {
     Map<String, Object> claims = jwtToken.getClaims();
     List<String> rolesFromToken = AuthenticatedUser.extractRolesFromToken(jwtToken);
     Map<String, Object> userInfo = kindeService.getUserInfo(claims.get("sub").toString());
-    User user = User.fromTokenAttributes(userInfo, rolesFromToken);
+      User user = User.fromTokenAttributes(userInfo, rolesFromToken);
     Optional<User> existingUser = userRepository.getOneByEmail(user.getEmail());
     if (existingUser.isPresent()) {
       if (claims.get(UPDATE_AT_KEY) != null) {
