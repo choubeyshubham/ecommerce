@@ -1,7 +1,7 @@
 package in.choubeyshubham.ecom.order.domain.user.vo;
 
 import in.choubeyshubham.ecom.shared.error.domain.Assert;
-import lombok.Builder;
+import org.jilt.Builder;
 
 @Builder
 public record UserAddress(String street, String city, String zipCode, String country) {
