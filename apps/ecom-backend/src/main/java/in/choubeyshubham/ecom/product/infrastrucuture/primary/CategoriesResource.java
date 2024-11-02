@@ -1,7 +1,9 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.primary;
 
+import in.choubeyshubham.ecom.product.application.ProductsApplicationService;
+import in.choubeyshubham.ecom.product.domain.aggregate.Category;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import jakarta.persistence.EntityNotFoundException;
-import org.apache.coyote.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -14,9 +16,9 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
-import java.util.stream.Collectors;
 
-import static in.choubeyshubham.ecom.product.infrastructure.primary.ProductsAdminResource.ROLE_ADMIN;
+import static in.choubeyshubham.ecom.product.infrastrucuture.primary.ProductsAdminResource.ROLE_ADMIN;
+
 
 @RestController
 @RequestMapping("/api/categories")

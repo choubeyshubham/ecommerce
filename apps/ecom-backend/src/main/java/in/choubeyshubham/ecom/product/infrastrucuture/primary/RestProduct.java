@@ -1,12 +1,15 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.primary;
 
+import in.choubeyshubham.ecom.product.domain.aggregate.Product;
+import in.choubeyshubham.ecom.product.domain.aggregate.ProductBuilder;
+import in.choubeyshubham.ecom.product.domain.vo.*;
 import org.jilt.Builder;
 
 import java.util.List;
 import java.util.UUID;
 
 @Builder
-public class   {
+public class RestProduct{
 
 private String brand;
 private String color;

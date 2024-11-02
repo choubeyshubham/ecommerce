@@ -1,6 +1,7 @@
 package in.choubeyshubham.ecom.product.domain.repository;
 
 import in.choubeyshubham.ecom.product.domain.aggregate.Category;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

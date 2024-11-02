@@ -1,5 +1,6 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.secondary.repository;
 
+import in.choubeyshubham.ecom.product.infrastrucuture.secondary.entity.CategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

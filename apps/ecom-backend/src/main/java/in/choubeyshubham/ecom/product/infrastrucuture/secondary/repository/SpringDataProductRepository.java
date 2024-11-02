@@ -1,5 +1,14 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.secondary.repository;
 
+import in.choubeyshubham.ecom.order.domain.order.vo.ProductPublicId;
+import in.choubeyshubham.ecom.product.domain.aggregate.FilterQuery;
+import in.choubeyshubham.ecom.product.domain.aggregate.Picture;
+import in.choubeyshubham.ecom.product.domain.aggregate.Product;
+import in.choubeyshubham.ecom.product.domain.repository.ProductRepository;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
+import in.choubeyshubham.ecom.product.infrastrucuture.secondary.entity.CategoryEntity;
+import in.choubeyshubham.ecom.product.infrastrucuture.secondary.entity.PictureEntity;
+import in.choubeyshubham.ecom.product.infrastrucuture.secondary.entity.ProductEntity;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

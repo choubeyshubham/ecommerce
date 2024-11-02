@@ -1,5 +1,10 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.primary;
 
+import in.choubeyshubham.ecom.product.domain.aggregate.Category;
+import in.choubeyshubham.ecom.product.domain.aggregate.CategoryBuilder;
+import in.choubeyshubham.ecom.product.domain.vo.CategoryName;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
+import in.choubeyshubham.ecom.shared.error.domain.Assert;
 import org.jilt.Builder;
 
 import java.util.UUID;

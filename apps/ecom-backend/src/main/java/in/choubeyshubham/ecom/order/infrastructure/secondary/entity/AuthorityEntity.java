@@ -1,5 +1,8 @@
 package in.choubeyshubham.ecom.order.infrastructure.secondary.entity;
 
+import in.choubeyshubham.ecom.order.domain.user.aggregate.Authority;
+import in.choubeyshubham.ecom.order.domain.user.aggregate.AuthorityBuilder;
+import in.choubeyshubham.ecom.order.domain.user.vo.AuthorityName;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

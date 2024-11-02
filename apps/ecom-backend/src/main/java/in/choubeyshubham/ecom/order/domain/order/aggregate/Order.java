@@ -1,7 +1,9 @@
 package in.choubeyshubham.ecom.order.domain.order.aggregate;
 
+import in.choubeyshubham.ecom.order.domain.order.vo.OrderStatus;
 import in.choubeyshubham.ecom.order.domain.order.vo.StripeSessionId;
 import in.choubeyshubham.ecom.order.domain.user.aggregate.User;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import org.jilt.Builder;
 
 import java.util.List;

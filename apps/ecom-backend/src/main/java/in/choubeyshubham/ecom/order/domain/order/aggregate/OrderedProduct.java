@@ -3,6 +3,8 @@ package in.choubeyshubham.ecom.order.domain.order.aggregate;
 import in.choubeyshubham.ecom.order.domain.order.vo.OrderPrice;
 import in.choubeyshubham.ecom.order.domain.order.vo.OrderQuantity;
 import in.choubeyshubham.ecom.order.domain.order.vo.ProductPublicId;
+import in.choubeyshubham.ecom.product.domain.aggregate.Product;
+import in.choubeyshubham.ecom.product.domain.vo.ProductName;
 import org.jilt.Builder;
 
 @Builder

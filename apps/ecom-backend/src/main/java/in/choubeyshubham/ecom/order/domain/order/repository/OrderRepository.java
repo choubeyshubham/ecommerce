@@ -4,6 +4,7 @@ import in.choubeyshubham.ecom.order.domain.order.aggregate.Order;
 import in.choubeyshubham.ecom.order.domain.order.aggregate.StripeSessionInformation;
 import in.choubeyshubham.ecom.order.domain.order.vo.OrderStatus;
 import in.choubeyshubham.ecom.order.domain.user.vo.UserPublicId;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

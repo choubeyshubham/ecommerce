@@ -1,5 +1,7 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.secondary.repository;
 
+import in.choubeyshubham.ecom.product.domain.vo.ProductSize;
+import in.choubeyshubham.ecom.product.infrastrucuture.secondary.entity.ProductEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

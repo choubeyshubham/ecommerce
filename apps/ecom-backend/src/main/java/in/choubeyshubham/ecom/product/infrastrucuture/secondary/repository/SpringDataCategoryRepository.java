@@ -1,5 +1,9 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.secondary.repository;
 
+import in.choubeyshubham.ecom.product.domain.aggregate.Category;
+import in.choubeyshubham.ecom.product.domain.repository.CategoryRepository;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
+import in.choubeyshubham.ecom.product.infrastrucuture.secondary.entity.CategoryEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;

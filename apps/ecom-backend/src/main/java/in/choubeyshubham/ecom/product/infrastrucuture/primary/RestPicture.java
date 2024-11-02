@@ -1,5 +1,7 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.primary;
 
+import in.choubeyshubham.ecom.product.domain.aggregate.Picture;
+import in.choubeyshubham.ecom.product.domain.aggregate.PictureBuilder;
 import in.choubeyshubham.ecom.shared.error.domain.Assert;
 import org.jilt.Builder;
 

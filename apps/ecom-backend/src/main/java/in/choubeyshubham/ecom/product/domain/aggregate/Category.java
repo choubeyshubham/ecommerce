@@ -1,5 +1,7 @@
 package in.choubeyshubham.ecom.product.domain.aggregate;
 
+import in.choubeyshubham.ecom.product.domain.vo.CategoryName;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import in.choubeyshubham.ecom.shared.error.domain.Assert;
 import org.jilt.Builder;
 

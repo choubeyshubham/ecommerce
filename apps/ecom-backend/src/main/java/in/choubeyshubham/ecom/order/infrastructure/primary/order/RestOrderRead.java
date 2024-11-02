@@ -1,6 +1,8 @@
 package in.choubeyshubham.ecom.order.infrastructure.primary.order;
 
 
+import in.choubeyshubham.ecom.order.domain.order.aggregate.Order;
+import in.choubeyshubham.ecom.order.domain.order.vo.OrderStatus;
 import org.jilt.Builder;
 
 import java.util.List;

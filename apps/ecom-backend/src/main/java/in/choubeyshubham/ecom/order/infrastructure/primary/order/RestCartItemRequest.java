@@ -1,5 +1,8 @@
 package in.choubeyshubham.ecom.order.infrastructure.primary.order;
 
+import in.choubeyshubham.ecom.order.domain.order.aggregate.DetailCartItemRequest;
+import in.choubeyshubham.ecom.order.domain.order.aggregate.DetailCartItemRequestBuilder;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import org.jilt.Builder;
 
 import java.util.List;

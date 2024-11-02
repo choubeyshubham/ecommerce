@@ -1,5 +1,10 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.primary;
 
+import in.choubeyshubham.ecom.product.application.ProductsApplicationService;
+import in.choubeyshubham.ecom.product.domain.aggregate.FilterQueryBuilder;
+import in.choubeyshubham.ecom.product.domain.aggregate.Product;
+import in.choubeyshubham.ecom.product.domain.vo.ProductSize;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

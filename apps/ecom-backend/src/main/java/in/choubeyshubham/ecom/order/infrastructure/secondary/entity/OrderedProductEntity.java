@@ -1,5 +1,11 @@
 package in.choubeyshubham.ecom.order.infrastructure.secondary.entity;
 
+import in.choubeyshubham.ecom.order.domain.order.aggregate.OrderedProduct;
+import in.choubeyshubham.ecom.order.domain.order.aggregate.OrderedProductBuilder;
+import in.choubeyshubham.ecom.order.domain.order.vo.OrderPrice;
+import in.choubeyshubham.ecom.order.domain.order.vo.OrderQuantity;
+import in.choubeyshubham.ecom.order.domain.order.vo.ProductPublicId;
+import in.choubeyshubham.ecom.product.domain.vo.ProductName;
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;

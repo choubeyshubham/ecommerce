@@ -1,5 +1,11 @@
 package in.choubeyshubham.ecom.product.infrastrucuture.primary;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import in.choubeyshubham.ecom.product.application.ProductsApplicationService;
+import in.choubeyshubham.ecom.product.domain.aggregate.Product;
+import in.choubeyshubham.ecom.product.domain.vo.PublicId;
+import in.choubeyshubham.ecom.product.infrastrucuture.primary.exceprtions.MultipartPictureException;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

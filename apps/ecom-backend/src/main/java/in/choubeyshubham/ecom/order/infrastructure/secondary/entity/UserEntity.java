@@ -1,5 +1,9 @@
 package in.choubeyshubham.ecom.order.infrastructure.secondary.entity;
 
+import in.choubeyshubham.ecom.order.domain.user.aggregate.User;
+import in.choubeyshubham.ecom.order.domain.user.aggregate.UserBuilder;
+import in.choubeyshubham.ecom.order.domain.user.vo.*;
+import in.choubeyshubham.ecom.shared.jpa.AbstractAuditingEntity;
 import jakarta.persistence.*;
 import org.jilt.Builder;
 
