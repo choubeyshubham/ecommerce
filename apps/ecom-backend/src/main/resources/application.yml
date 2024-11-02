@@ -70,20 +70,20 @@ spring:
 server:
   port: 8080
 
-#application:
-#  client-base-url: http://localhost:4200
-#  cors:
-#    allowed-origins: http://localhost:4200
-#    allowed-methods: "*"
-#    allowed-headers: "*"
-#    exposed-headers: "*"
-#    allow-credentials: false
-#    max-age: 300
-#  kinde:
-#    api: https://choubeyshubham.kinde.com
-#    client-id: 154bfe4a677f4330a39a1e53a5403a25
-#    client-secret: 0NVIOA8arLaNwN7vmZjCX2liCbAqobBMaladkTwD2M0xL3SqG
-#    audience: https://choubeyshubham.kinde.com/api
-#  stripe:
-#    api-key: ${STRIPE_API_KEY}
-#    webhook-secret: ${STRIPE_WEBHOOK_SECRET}
+application:
+  client-base-url: http://localhost:4200
+  cors:
+    allowed-origins: http://localhost:4200
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "*"
+    allow-credentials: false
+    max-age: 300
+  kinde:
+    api: https://choubeyshubham.kinde.com
+    client-id: 154bfe4a677f4330a39a1e53a5403a25
+    client-secret: 0NVIOA8arLaNwN7vmZjCX2liCbAqobBMaladkTwD2M0xL3SqG
+    audience: https://choubeyshubham.kinde.com/api
+  stripe:
+    api-key: pk_test_51QGbcRRqsROGDj83VxyRHRHsk6YWShYOS4tBC4cedREOyBNckrSebqUC5EdFQsajqapVy2l1MJicmg919HGVWOKe00WNwFfllb
+    webhook-secret: sk_test_51QGbcRRqsROGDj837NmYqlDqKuPcyVb5gpwxUmAgyccJuP6w96pU8HI8gwmDmEshKQpZPjEAEO1G6soWhm28GC8H00U71t63aa
