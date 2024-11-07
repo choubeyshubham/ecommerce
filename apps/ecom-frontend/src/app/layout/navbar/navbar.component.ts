@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
 
   categoryQuery = injectQuery(() => ({
     queryKey: ['categories'],
-    queryFn: () => lastValueFrom(this.productService.findAllCategories()),
+    // queryFn: () => lastValueFrom(this.productService.findAllCategories()),
   }));
 
   login(): void {
