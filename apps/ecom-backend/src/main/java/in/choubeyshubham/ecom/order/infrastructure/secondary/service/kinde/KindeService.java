@@ -11,13 +11,12 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-//import java.lang.reflect.ParameterizedType;
-//import java.net.URI;
-//import java.net.URL;
+
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -45,7 +44,7 @@ public class KindeService {
     try {
       ResponseEntity<KindeAccessToken> accessToken = restClient.post()
         .uri(apiUrl + "/oauth/token")
-          .body("grant_type=client_credentials&audience=" + URLEncoder.encode(audience, StandardCharsets.UTF_8))
+        .body("grant_type=client_credentials&audience=" + URLEncoder.encode(audience, StandardCharsets.UTF_8))
         .accept(MediaType.APPLICATION_JSON)
         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
         .header("Authorization",
@@ -53,7 +52,9 @@ public class KindeService {
         .header("Content-Type", ContentType.APPLICATION_FORM_URLENCODED.getMimeType())
         .retrieve()
         .toEntity(KindeAccessToken.class);
-      return Optional.of(accessToken.getBody().accessToken());
+      return Optional.of(Objects.requireNonNull(accessToken.getBody()).accessToken());
+//      return Optional.of(accessToken.getBody().accessToken());
+
     } catch (Exception e) {
       log.error("Error while getting token", e);
       return Optional.empty();

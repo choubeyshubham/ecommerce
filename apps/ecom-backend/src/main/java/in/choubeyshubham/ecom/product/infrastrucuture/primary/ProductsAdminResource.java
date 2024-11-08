@@ -81,7 +81,7 @@ public class ProductsAdminResource {
       return ResponseEntity.of(problemDetail).build();
     }
   }
-
+// if resorce fail
   @GetMapping
   @PreAuthorize("hasAnyRole('" + ROLE_ADMIN + "')")
   public ResponseEntity<Page<RestProduct>> getAll(Pageable pageable) {

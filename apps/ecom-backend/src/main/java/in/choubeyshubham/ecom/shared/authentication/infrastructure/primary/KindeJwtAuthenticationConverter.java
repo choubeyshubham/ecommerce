@@ -2,8 +2,8 @@ package in.choubeyshubham.ecom.shared.authentication.infrastructure.primary;
 
 
 import in.choubeyshubham.ecom.shared.authentication.application.AuthenticatedUser;
-import jakarta.validation.constraints.NotNull;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,21 +16,15 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class KindeJwtAuthenticationConverter implements Converter<Jwt, AbstractAuthenticationToken> {
-
-
   @Override
-  public AbstractAuthenticationToken convert(@NotNull Jwt source) {
+  public AbstractAuthenticationToken convert(@NonNull Jwt source) {
     return new JwtAuthenticationToken(source,
-      Stream.concat(new JwtGrantedAuthoritiesConverter().convert(source).stream(),
-        extractResourceRoles(source).stream()).collect(Collectors.toSet()));
+      Stream.concat(new JwtGrantedAuthoritiesConverter().convert(source).stream(), extractResourceRoles(source).stream()).collect(Collectors.toSet()));
   }
 
-  private Collection<? extends GrantedAuthority> extractResourceRoles(@NotNull Jwt jwt) {
+  private Collection<? extends GrantedAuthority> extractResourceRoles(Jwt jwt) {
     return AuthenticatedUser.extractRolesFromToken(jwt).stream()
       .map(SimpleGrantedAuthority::new)
       .collect(Collectors.toSet());
-
   }
-
-
 }
