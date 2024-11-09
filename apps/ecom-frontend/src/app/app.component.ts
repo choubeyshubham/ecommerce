@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
 
   private oauth2Service = inject(Oauth2Service);
 
-  // toastService = inject(ToastService);
+  toastService = inject(ToastService);
 
   platformId = inject(PLATFORM_ID);
 
