@@ -18,21 +18,22 @@ import {
   provideQueryClient,
   QueryClient,
 } from '@tanstack/angular-query-experimental';
-import { SsrStorageService } from './auth/ssr-storage.service'
-// import { provideNgxStripe } from 'ngx-stripe';
+import { SsrStorageService } from './auth/ssr-storage.service';
+import { provideNgxStripe } from 'ngx-stripe';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideClientHydration(),
     provideZoneChangeDetection({ eventCoalescing: true }),
-    // provideRouter(appRoutes, withComponentInputBinding()),
+    provideRouter(appRoutes, withComponentInputBinding()),
     provideHttpClient(withFetch(), withInterceptors([authInterceptor()])),
     provideAuth({
       config: {
         authority: environment.kinde.authority,
         redirectUrl: environment.kinde.redirectUrl,
         postLogoutRedirectUri: environment.kinde.postLogoutRedirectUri,
-        clientId: environment.kinde.clientId,        scope: 'openid profile email offline',
+        clientId: environment.kinde.clientId,
+        scope: 'openid profile email offline',
         responseType: 'code',
         silentRenew: true,
         useRefreshToken: true,
@@ -45,7 +46,6 @@ export const appConfig: ApplicationConfig = {
     }),
     { provide: AbstractSecurityStorage, useClass: SsrStorageService },
     provideQueryClient(new QueryClient()),
-    // provideNgxStripe(environment.stripePublishableKey),
+    provideNgxStripe(environment.stripePublishableKey),
   ],
 };
-

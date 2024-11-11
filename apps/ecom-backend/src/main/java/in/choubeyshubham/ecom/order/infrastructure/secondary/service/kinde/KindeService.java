@@ -11,7 +11,6 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -53,8 +52,6 @@ public class KindeService {
         .retrieve()
         .toEntity(KindeAccessToken.class);
       return Optional.of(Objects.requireNonNull(accessToken.getBody()).accessToken());
-//      return Optional.of(accessToken.getBody().accessToken());
-
     } catch (Exception e) {
       log.error("Error while getting token", e);
       return Optional.empty();
